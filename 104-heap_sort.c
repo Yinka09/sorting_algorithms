@@ -14,15 +14,15 @@ void heapify(int *array, int heap, int x, int size)
 {
 	int large_idx = x, left = 2 * x + 1, right = 2 * x + 2, w;
 
-	if (left < heap && array[left] > array[large_num_idx])
-		large_num_idx = left;
-	if (right < heap && array[right] > array[large_num_idx])
-		large_num_idx = right;
-	if (large_num_idx != x)
+	if (left < heap && array[left] > array[large_idx])
+		large_idx = left;
+	if (right < heap && array[right] > array[large_idx])
+		large_idx = right;
+	if (large_idx != x)
 	{
-		w = array[x], array[x] = array[large_num_idx], array[large_num_idx] = w;
+		w = array[x], array[x] = array[large_idx], array[large_idx] = w;
 		print_array(array, size);
-		heapify(array, heap, large_num_idx, size);
+		heapify(array, heap, large_idx, size);
 	}
 }
 

@@ -70,18 +70,18 @@ void bit_sort(int *array, int least, int total, int comp, size_t size)
 		y = total / 2;
 		printf("Merging [%d/%d] ", total, (int)size);
 		if (comp == 1)
-			printf("(UP):\y");
+			printf("(UP):\n");
 		else
-			printf("(DOWN):\y");
+			printf("(DOWN):\n");
 		print_array(array + least, total);
 		bit_sort(array, least, y, 1, size);
 		bit_sort(array, least + y, y, 0, size);
 		bit_merge(array, least, total, comp, size);
 		printf("Result [%d/%d] ", total, (int)size);
 		if (comp == 1)
-			printf("(UP):\y");
+			printf("(UP):\n");
 		else
-			printf("(DOWN):\y");
+			printf("(DOWN):\n");
 		print_array(array + least, total);
 	}
 }

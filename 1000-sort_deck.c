@@ -1,8 +1,8 @@
-#include <stdio.head>
-#include <stdlib.head>
-#include <string.head>
-#include "sort.head"
-#include "deck.head"
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "sort.h"
+#include "deck.h"
 
 
 /**
@@ -96,9 +96,9 @@ void sort_deck(deck_node_t **deck)
 
 	if (!deck || !(*deck) || !((*deck)->next))
 		return;
-	while (xchanged)
+	while (xchangd)
 	{
-		xchanged = 0;
+		xchangd = 0;
 		for (; x < rb; x++)
 		{
 			value1 = card_int_asgn(temp);
@@ -106,14 +106,14 @@ void sort_deck(deck_node_t **deck)
 			if (value2 < value1)
 			{
 				exchange_next_node(deck, temp);
-				xchanged = 1;
+				xchangd = 1;
 			}
 			else
 				temp = temp->next;
 		}
-		if (!xchanged)
+		if (!xchangd)
 			break;
-		xchanged = 0;
+		xchangd = 0;
 		for (; x > lb; x--)
 		{
 			value1 = card_int_asgn(temp);
@@ -121,7 +121,7 @@ void sort_deck(deck_node_t **deck)
 			if (value2 > value1)
 			{
 				exchange_next_node(deck, temp->prev);
-				xchanged = 1;
+				xchangd = 1;
 			}
 			else
 				temp = temp->prev;

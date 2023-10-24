@@ -66,5 +66,10 @@ int card_int_asgn(deck_node_t *node);
 void sort_deck(deck_node_t **deck);
 void print_deck(const deck_node_t *deck);
 
+/* 1000-sort_deck.c */
+size_t length_of_deck(const deck_node_t *head);
+void exchange_next_node(deck_node_t **deck, deck_node_t *node);
+int card_int_asgn(deck_node_t *node);
+void sort_deck(deck_node_t **deck);
 
 #endif /* DECK_H */

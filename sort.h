@@ -74,12 +74,6 @@ int separate(int *array, int least, int large, size_t size);
 void recur_hoare_qsort(int *array, int least, int large, size_t size);
 void quick_sort_hoare(int *array, size_t size);
 
-/* 1000-sort_deck.c */
-size_t length_of_deck(const deck_node_t *head);
-void exchange_next_node(deck_node_t **deck, deck_node_t *node);
-int card_int_asgn(deck_node_t *node);
-void sort_deck(deck_node_t **deck);
-
 /** Given helper functions */
 void print_array(const int *array, size_t size);
 void print_list(const listint_t *list);
